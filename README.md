@@ -77,8 +77,26 @@ PRs are welcome. Use the template, keep the format, and don't add anything you h
 
 MIT. Use them, change them, share them, whatever. See [LICENSE](./LICENSE).
 
+## Checks
+
+`python3 tools/check_repo.py` verifies the claims this README makes: every
+relative link resolves, every prompt is listed in both the root index and its
+category index, and every prompt has the sections CONTRIBUTING requires. CI runs
+it on every push and pull request, alongside an external link checker.
+
+```text
+[links] ok
+[index] ok
+[sections] ok
+
+All checks passed: 15 prompts, 25 markdown files.
+```
+
+That block is real output from the run that added it. `assets/checks.txt` holds
+the same capture, and a test fails when it drifts.
+
 ## Me
 
-**slopmanufacturer** — [github.com/slopmanufacturer](https://github.com/slopmanufacturer)
+**codefactory** — [github.com/vezeqs](https://github.com/vezeqs)
 
 I build small tools and write things down. More soon.

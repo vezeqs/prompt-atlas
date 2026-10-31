@@ -27,6 +27,9 @@ PRs are welcome. Three rules:
 
 ## Links
 
-Every README link has to resolve — check yours before opening the PR.
-CI runs a link checker on all markdown files, so dead links will fail
-the build anyway.
+Every README link has to resolve — check yours before opening the PR. Run
+`python3 tools/check_repo.py` locally: it checks that every relative link
+resolves, that every prompt appears in both the root index and its category
+index, and that every prompt has the sections this file requires. CI runs the
+same check, plus an external link checker on all markdown files, so a dead link
+or an unindexed prompt fails the build.
