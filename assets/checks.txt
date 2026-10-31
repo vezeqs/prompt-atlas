@@ -1,0 +1,5 @@
+[links] ok
+[index] ok
+[sections] ok
+
+All checks passed: 15 prompts, 25 markdown files.
