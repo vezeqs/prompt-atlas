@@ -1,4 +1,4 @@
-name: Check links
+name: checks
 
 on:
   push:
@@ -6,11 +6,17 @@ on:
   pull_request:
 
 jobs:
-  links:
+  checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: lycheeverse/lychee-action@v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Repo checks
+        run: python3 -m unittest discover -s tests -v
+      - name: External links
+        uses: lycheeverse/lychee-action@v2
         with:
           args: --verbose --no-progress './**/*.md'
           fail: true
